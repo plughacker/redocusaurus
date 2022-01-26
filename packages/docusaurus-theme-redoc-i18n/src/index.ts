@@ -14,7 +14,7 @@ export default function redocTheme(
   options: ThemeOptions,
 ): Plugin<null> {
   return {
-    name: 'docusaurus-theme-redoc',
+    name: 'docusaurus-theme-redoc-i18n',
     configureWebpack() {
       return {
         resolve: {
