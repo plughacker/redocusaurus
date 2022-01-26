@@ -29,9 +29,9 @@
   "author": "Rohit Gohri <work@rohit.page>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rohit-gohri/redocusaurus/issues"
+    "url": "https://github.com/plughacker/redocusaurus/issues"
   },
-  "homepage": "https://github.com/rohit-gohri/redocusaurus#readme",
+  "homepage": "https://github.com/plughacker/redocusaurus#readme",
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.2",
     "@changesets/cli": "^2.20.0",
