@@ -1,3 +1,3 @@
-import theme from 'docusaurus-theme-redoc';
+import theme from 'docusaurus-theme-redoc-i18n';
 
 export default theme;

@@ -1,6 +1,6 @@
 import type { LoadContext } from '@docusaurus/types';
-import type { PluginOptions } from 'docusaurus-plugin-redoc';
-import type { ThemeOptions } from 'docusaurus-theme-redoc';
+import type { PluginOptions } from 'docusaurus-plugin-redoc-i18n';
+import type { ThemeOptions } from 'docusaurus-theme-redoc-i18n';
 
 export interface PresetOptions {
   debug?: boolean;
@@ -8,7 +8,7 @@ export interface PresetOptions {
   theme?: ThemeOptions;
 }
 
-export type PresetEntry = ['redocusaurus', PresetOptions];
+export type PresetEntry = ['redocusaurus-i18n', PresetOptions];
 
 export default function preset(
   context: LoadContext,
@@ -34,10 +34,10 @@ export default function preset(
   }
 
   const config = {
-    themes: [[require.resolve('docusaurus-theme-redoc'), theme]],
+    themes: [[require.resolve('docusaurus-theme-redoc-i18n'), theme]],
     plugins: [
       ...specsArray.map((pluginOpts, index) => [
-        require.resolve('docusaurus-plugin-redoc'),
+        require.resolve('docusaurus-plugin-redoc-i18n'),
         {
           id: `plugin-redoc-${index}`,
           ...pluginOpts,

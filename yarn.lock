@@ -5901,9 +5901,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"docusaurus-plugin-redoc@^0.5.0, docusaurus-plugin-redoc@workspace:packages/docusaurus-plugin-redoc":
+"docusaurus-plugin-redoc-i18n@workspace:packages/docusaurus-plugin-redoc-i18n":
   version: 0.0.0-use.local
-  resolution: "docusaurus-plugin-redoc@workspace:packages/docusaurus-plugin-redoc"
+  resolution: "docusaurus-plugin-redoc-i18n@workspace:packages/docusaurus-plugin-redoc-i18n"
   dependencies:
     "@docusaurus/types": ^2.0.0-beta.14
     "@docusaurus/utils": ^2.0.0-beta.14
@@ -5912,9 +5912,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"docusaurus-theme-redoc@^0.5.1, docusaurus-theme-redoc@workspace:packages/docusaurus-theme-redoc":
+"docusaurus-theme-redoc-i18n@workspace:packages/docusaurus-theme-redoc-i18n":
   version: 0.0.0-use.local
-  resolution: "docusaurus-theme-redoc@workspace:packages/docusaurus-theme-redoc"
+  resolution: "docusaurus-theme-redoc-i18n@workspace:packages/docusaurus-theme-redoc-i18n"
   dependencies:
     "@docusaurus/module-type-aliases": ^2.0.0-beta.14
     "@docusaurus/theme-classic": ^2.0.0-beta.14
@@ -11830,6 +11830,14 @@ __metadata:
   languageName: node
   linkType: hard
 
+"redocusaurus-i18n@workspace:packages/redocusaurus-i18n":
+  version: 0.0.0-use.local
+  resolution: "redocusaurus-i18n@workspace:packages/redocusaurus-i18n"
+  dependencies:
+    "@docusaurus/types": ^2.0.0-beta.14
+  languageName: unknown
+  linkType: soft
+
 "redocusaurus-monorepo@workspace:.":
   version: 0.0.0-use.local
   resolution: "redocusaurus-monorepo@workspace:."
@@ -11864,17 +11872,6 @@ __metadata:
     clsx: ^1.1.1
     react: ^17.0.2
     react-dom: ^17.0.2
-    redocusaurus: ^0.5.1
-  languageName: unknown
-  linkType: soft
-
-"redocusaurus@^0.5.1, redocusaurus@workspace:packages/redocusaurus":
-  version: 0.0.0-use.local
-  resolution: "redocusaurus@workspace:packages/redocusaurus"
-  dependencies:
-    "@docusaurus/types": ^2.0.0-beta.14
-    docusaurus-plugin-redoc: ^0.5.0
-    docusaurus-theme-redoc: ^0.5.1
   languageName: unknown
   linkType: soft
 

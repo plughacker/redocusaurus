@@ -2,7 +2,7 @@
  * @type {import('redocusaurus').PresetEntry}
  */
 const redocusaurus = [
-  'redocusaurus',
+  'redocusaurus-i18n',
   {
     debug: true,
     specs: [
