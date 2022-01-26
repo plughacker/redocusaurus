@@ -1,5 +1,5 @@
 {
-  "name": "docusaurus-theme-redoc",
+  "name": "docusaurus-theme-redoc-i18n",
   "version": "0.6.0",
   "description": "Redoc Component for DocusaurusV2",
   "main": "dist/index.js",

@@ -1,5 +1,5 @@
 {
-  "name": "docusaurus-plugin-redoc",
+  "name": "docusaurus-plugin-redoc-i18n",
   "version": "0.6.0",
   "description": "Redoc Plugin for DocusaurusV2",
   "main": "dist/index.js",
