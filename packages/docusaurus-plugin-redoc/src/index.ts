@@ -3,7 +3,7 @@ import path from 'path';
 import type {
   LoadContext,
   Plugin,
-  OptionValidationContext,
+  OptionValidationContext, TranslationFiles, TranslationFile,
 } from '@docusaurus/types';
 import { normalizeUrl } from '@docusaurus/utils';
 import YAML from 'yaml';
@@ -31,27 +31,27 @@ export default function redocPlugin(
   }
   return {
     name: 'docusaurus-plugin-redoc',
-    async loadContent() {
-      let content: Record<string, unknown> | null = null;
-      if (spec) {
-        const file = fs.readFileSync(spec).toString();
-
-        if (spec.endsWith('.yaml') || spec.endsWith('.yml')) {
-          const parsedSpec = YAML.parse(file);
-          content = parsedSpec;
-        } else content = JSON.parse(file);
-      }
-      if (debug) {
-        console.error('[REDOCUSAURUS_PLUGIN] Content:', content);
-      }
-      return content;
-    },
     getPathsToWatch() {
       if (!spec) {
         return [];
       }
       const contentPath = path.resolve(context.siteDir, spec);
       return [contentPath];
+    },
+    translateContent({content, translationFiles}) {
+        if (spec) {
+          let spec_locale = path.resolve("i18n", context.i18n.currentLocale, 'docusaurus-plugin-redoc', spec);
+          const file = fs.readFileSync(spec_locale).toString();
+
+          if (spec_locale.endsWith('.yaml') || spec_locale.endsWith('.yml')) {
+            const parsedSpec = YAML.parse(file);
+            content = parsedSpec;
+          } else content = JSON.parse(file);
+        }
+        if (debug) {
+          console.error('[REDOCUSAURUS_PLUGIN] Content:', content);
+        }
+        return content;
     },
     async contentLoaded({ content, actions }) {
       const { createData, addRoute, setGlobalData } = actions;

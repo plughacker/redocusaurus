@@ -4,25 +4,11 @@
 const redocusaurus = [
   'redocusaurus',
   {
-    debug: Boolean(process.env.DEBUG || process.env.CI),
+    debug: true,
     specs: [
       {
-        id: 'using-spec-url',
-        specUrl: 'https://redocly.github.io/redoc/openapi.yaml',
-        routePath: '/examples/using-spec-url/',
-      },
-      {
-        id: 'using-relative-url',
-        specUrl: `${process.env.DEPLOY_BASE_URL || '/'}openapi-page.yaml`,
-        routePath: '/examples/using-relative-url/',
-      },
-      {
         id: 'using-spec-yaml',
-        spec: 'openapi.yaml',
-        /**
-         * This becomes the Download URL in this case, while docs are generated from `spec`
-         */
-        specUrl: `${process.env.DEPLOY_BASE_URL || '/'}openapi-page.yaml`,
+        spec: 'openapi-page.yaml',
         routePath: '/examples/using-spec-yaml/',
       },
     ],
@@ -69,6 +55,10 @@ const config = {
   url: process.env.DEPLOY_PRIME_URL || 'http://localhost:5000', // Your website URL
   baseUrl: process.env.DEPLOY_BASE_URL || '/', // Base URL for your project */
   favicon: 'img/favicon.ico',
+  i18n: {
+    defaultLocale: 'pt-BR',
+    locales: ['en', 'pt-BR'],
+  },
   themeConfig: {
     navbar: {
       title: 'Redocusaurus',
@@ -87,18 +77,6 @@ const config = {
               to: '/examples',
             },
             {
-              label: 'Custom Page',
-              to: '/examples/custom-page/',
-            },
-            {
-              label: 'Custom Layout',
-              to: '/examples/custom-layout/',
-            },
-            {
-              label: 'Using Spec URL',
-              to: '/examples/using-spec-url/',
-            },
-            {
               label: 'Using Spec YAML',
               to: '/examples/using-spec-yaml/',
             },
@@ -110,6 +88,10 @@ const config = {
           className: 'header-github-logo',
           'aria-label': 'GitHub Repo',
         },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        }
       ],
     },
     footer: {
