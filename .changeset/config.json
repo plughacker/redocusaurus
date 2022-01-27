@@ -2,11 +2,11 @@
   "$schema": "https://unpkg.com/@changesets/config@1.6.0/schema.json",
   "changelog": [
     "@changesets/changelog-github",
-    { "repo": "rohit-gohri/redocusaurus" }
+    { "repo": "plughacker/redocusaurus-i18n" }
   ],
   "commit": true,
   "linked": [
-    ["redocusaurus", "docusaurus-theme-redoc", "docusaurus-plugin-redoc"]
+    ["redocusaurus-i18n", "docusaurus-theme-redoc-i18n", "docusaurus-plugin-redoc-i18n"]
   ],
   "access": "public",
   "baseBranch": "main",
