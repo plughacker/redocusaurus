@@ -11,7 +11,7 @@ import './styles.css';
  */
 function Redoc(props) {
     const { isDarkTheme } = useThemeContext();
-    const { lightTheme, darkTheme, redocOptions } = usePluginData('docusaurus-theme-redoc');
+    const { lightTheme, darkTheme, redocOptions } = usePluginData('docusaurus-theme-redoc-i18n');
     const theme = isDarkTheme ? darkTheme : lightTheme;
     const { spec, specUrl } = props;
     const store = useMemo(() => {

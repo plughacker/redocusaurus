@@ -35,7 +35,7 @@ require("./styles.css");
  */
 function Redoc(props) {
     const { isDarkTheme } = (0, useThemeContext_1.default)();
-    const { lightTheme, darkTheme, redocOptions } = (0, useGlobalData_1.usePluginData)('docusaurus-theme-redoc');
+    const { lightTheme, darkTheme, redocOptions } = (0, useGlobalData_1.usePluginData)('docusaurus-theme-redoc-i18n');
     const theme = isDarkTheme ? darkTheme : lightTheme;
     const { spec, specUrl } = props;
     const store = (0, react_1.useMemo)(() => {

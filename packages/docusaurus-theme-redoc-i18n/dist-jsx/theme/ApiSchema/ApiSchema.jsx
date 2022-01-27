@@ -8,8 +8,8 @@ import '../Redoc/styles.css';
 import './styles.css';
 const ApiSchema = ({ id, example, pointer, ...rest }) => {
     const { isDarkTheme } = useThemeContext();
-    const allData = useAllPluginInstancesData('docusaurus-plugin-redoc');
-    const { lightTheme, darkTheme, redocOptions } = usePluginData('docusaurus-theme-redoc');
+    const allData = useAllPluginInstancesData('docusaurus-plugin-redoc-i18n');
+    const { lightTheme, darkTheme, redocOptions } = usePluginData('docusaurus-theme-redoc-i18n');
     const theme = isDarkTheme ? darkTheme : lightTheme;
     const store = useMemo(() => {
         const { specUrl, content, type } = allData[id] ||

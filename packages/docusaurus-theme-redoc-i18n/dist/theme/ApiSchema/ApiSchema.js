@@ -32,8 +32,8 @@ require("../Redoc/styles.css");
 require("./styles.css");
 const ApiSchema = ({ id, example, pointer, ...rest }) => {
     const { isDarkTheme } = (0, useThemeContext_1.default)();
-    const allData = (0, useGlobalData_1.useAllPluginInstancesData)('docusaurus-plugin-redoc');
-    const { lightTheme, darkTheme, redocOptions } = (0, useGlobalData_1.usePluginData)('docusaurus-theme-redoc');
+    const allData = (0, useGlobalData_1.useAllPluginInstancesData)('docusaurus-plugin-redoc-i18n');
+    const { lightTheme, darkTheme, redocOptions } = (0, useGlobalData_1.usePluginData)('docusaurus-theme-redoc-i18n');
     const theme = isDarkTheme ? darkTheme : lightTheme;
     const store = (0, react_1.useMemo)(() => {
         var _a;
