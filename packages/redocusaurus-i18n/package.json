@@ -1,6 +1,6 @@
 {
   "name": "redocusaurus-i18n",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Redoc for DocusaurusV2",
   "main": "dist/index.js",
   "exports": {
